@@ -106,6 +106,27 @@
 	font-size: 12px;
 	line-height: 100%;
 	color: #ffffff;
+	transition: transform 0.1s ease, background-color 0.3s ease-in-out;
+}
+
+.modal-delivery__submit:hover {
+	background-color: #ffab08;
+}
+.modal-delivery__submit:focus-visible {
+	background-color: #f86310;
+}
+.modal-delivery__submit:active {
+	transform: translate(1px, 2px);
+}
+.modal-delivery__submit:disabled {
+	color: #acacac;
+	background-color: #f9f9f9;
+}
+
+@supports not selector(::focus-visible) {
+	.modal-delivery__submit:focus {
+		background-color: #ffab08;
+	}
 }
 
 @media (min-width: 480px) {
