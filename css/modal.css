@@ -36,3 +36,13 @@
 		padding: 10px;
 	}
 }
+
+@media (min-width: 1024px) {
+	.modal {
+		padding: 20px;
+	}
+	.modal__close {
+		top: 24px;
+		right: 24px;
+	}
+}
