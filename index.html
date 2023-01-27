@@ -116,7 +116,7 @@
 					<!-- !Todo  order_open добавить в  catalog__order order Корзина "Но прописал скрипт"-->
 					<div class="catalog__order order">
 						<div class="order__wrapper">
-							<div class="order__wrap-title" tabindex="0">
+							<div class="order__wrap-title">
 								<h2 class="order__title">Корзина</h2>
 								<span class="order__count">4</span>
 							</div>
@@ -387,7 +387,7 @@
 			</div>
 		</footer>
 		<!-- !Todo Открытие \ закрытие модалки -->
-		<div class="modal modal_product">
+		<div class="modal modal_product" tabindex="0">
 			<div class="modal__main modal-product">
 				<div class="modal-product__container">
 					<h2 class="modal-product__title">Мясная бомба</h2>
@@ -556,15 +556,16 @@
 				.addEventListener('click', () => {
 					document.querySelector('.order').classList.toggle('order_open');
 				});
-		</script>
-		<script>
 			document
-				.querySelector('.modal-product__image')
+				.querySelector('.product__image')
 				.addEventListener('click', () => {
 					document
-						.querySelector('.product__image')
+						.querySelector('.modal_product')
 						.classList.toggle('modal_open');
 				});
+			document.querySelector('.modal__close').addEventListener('click', () => {
+				document.querySelector('.modal_product').classList.remove('modal_open');
+			});
 		</script>
 	</body>
 </html>
